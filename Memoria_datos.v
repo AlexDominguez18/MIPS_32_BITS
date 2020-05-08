@@ -11,7 +11,7 @@ reg [31:0]Memoria[0:31];
  initial
 	begin
 
-	$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS\\MemoriaDatos.txt",Memoria);
+	$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS-master\\MemoriaDatos.txt",Memoria);
 		
 	end
 

@@ -24,7 +24,7 @@ module Ciclo_Fetch(
 	
 	initial
 	begin
-		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS\\Instrucciones.txt", MEM);
+		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS-master\\Instrucciones.txt", MEM);
 	end
  
   assign Sal = {MEM[Dir],MEM[Dir+1],MEM[Dir+2],MEM[Dir+3]}; // se concatena

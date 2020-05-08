@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu May 07 10:43:07 2020
+Analysis & Synthesis Status : Successful - Fri May 08 14:55:33 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MIPS_32_BITS
-Top-level Entity Name : Mux2
+Top-level Entity Name : MIPS_32_BITS
 Family : Cyclone 10 LP
-Total logic elements : 32
-    Total combinational functions : 32
+Total logic elements : 0
+    Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 97
+Total pins : 1
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

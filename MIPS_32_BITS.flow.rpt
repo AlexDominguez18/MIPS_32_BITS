@@ -1,5 +1,5 @@
 Flow report for MIPS_32_BITS
-Thu May 07 10:43:07 2020
+Fri May 08 14:55:33 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 07 10:43:07 2020       ;
+; Flow Status                        ; Successful - Fri May 08 14:55:33 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_32_BITS                                ;
-; Top-level Entity Name              ; Mux2                                        ;
+; Top-level Entity Name              ; MIPS_32_BITS                                ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 32                                          ;
-;     Total combinational functions  ; 32                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 97                                          ;
+; Total pins                         ; 1                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2020 10:42:28 ;
+; Start date & time ; 05/08/2020 14:55:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS_32_BITS        ;
 +-------------------+---------------------+
@@ -73,11 +73,10 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 193904263055637.158886614710684        ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; Mux2        ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; Mux2        ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; Mux2        ; Top        ;
-; TOP_LEVEL_ENTITY                    ; Mux2                                   ; MIPS_32_BITS  ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 193904263055637.158896770803064        ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -86,8 +85,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4743 MB             ; 00:01:01                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:01                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4728 MB             ; 00:00:53                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

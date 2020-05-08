@@ -10,7 +10,7 @@ reg [31:0] BR[0:31]; //Se crea el banco de registros
 
 initial
 	begin
-		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS\\BR.txt", BR);
+		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS-master\\BR.txt", BR);
 	end
 
 
