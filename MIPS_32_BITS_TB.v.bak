@@ -1,0 +1,16 @@
+`timescale 1ns/1ns
+
+module MIPS_32_BITS_TB();
+
+//Conexiones
+
+
+//Señales de estímulo
+
+always @(*)
+	begin
+		
+		
+	end
+
+endmodule 

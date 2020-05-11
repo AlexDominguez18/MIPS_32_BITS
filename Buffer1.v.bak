@@ -4,8 +4,7 @@ module Buffer1(
 	input clk,
 	output reg[31:0]SFetch,
 	output reg [15:0]Jump,
-	output reg[4:0]RS,RT,RD,
-	output reg [5:0]Opcode
+	output reg[4:0]RS,RT,RD,Opcode
 );
 
 always @(posedge clk)
