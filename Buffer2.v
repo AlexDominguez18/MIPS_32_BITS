@@ -14,7 +14,6 @@ module Buffer2(
 always @(posedge clk)
 	begin
 		SFetch = Fetch;
-	   SSel = Sel;
 		SA = A;
 		SB = B;
 		SJump = Jump;

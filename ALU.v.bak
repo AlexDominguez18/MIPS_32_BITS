@@ -45,14 +45,6 @@ always @*
 				Res = ~(A | B);
 				zero_flag = (Res == 32'b 0);
 			end
-		4'b 1000:
-			begin
-				if(A < B)
-				Res = 32'd 1;
-				else 
-				Res = 32'd 0;
-				//zero_flag = (Res == 32'b 0);
-			end
 			
 		default:
 			begin

@@ -25,7 +25,7 @@ always @*
 					Sel = 4'b 0010;
 				end
 				
-			//MULTIPLICACION
+			//
 			6'b 000010:
 				begin
 					Sel = 4'b 0011;
@@ -54,12 +54,6 @@ always @*
 				begin
 					Sel = 4'b 0111;
 				end
-				
-			//STL
-			6'b 101010:
-				begin
-					Sel = 4'b 1000;
-				end 
 				
 			endcase
 		endcase

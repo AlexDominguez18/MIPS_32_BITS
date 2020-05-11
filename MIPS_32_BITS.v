@@ -1,7 +1,7 @@
 
 module MIPS_32_BITS(  
-	input clk,
-	output [31:0]resultadoAlu
+	input clk
+	//output [31:0]resultadoAlu
 );
 
  //conexiones 
@@ -175,12 +175,13 @@ Buffer3 a11(
 );
 				
  Buffer4 a13(
+   .clk(clk),
 	.Read_Data(Mem_BFF4),
 	.ResALU(Res_Mem),
 	.Write_Reg(CWR),
 	.Sal_WR(WR_BR),
-   .Sal_RD(AMux3),
-	.SResALU(BMux3),
+   .Sal_RD(BMux3),
+	.SResALU(AMux3),
 	.MemtoReg(MemtoReg2),
 	.RegWrite(RegWrite2),
 	.SMemtoReg(MemtoReg3),
