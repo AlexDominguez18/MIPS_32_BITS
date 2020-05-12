@@ -54,8 +54,14 @@ always @*
 				begin
 					Sel = 4'b 0111;
 				end
+			
+			//XOR
+			6'b 100110:
+				begin
+					Sel = 4'b 1001;
+				end
 				
-			//STL
+			//SLT
 			6'b 101010:
 				begin
 					Sel = 4'b 1000;

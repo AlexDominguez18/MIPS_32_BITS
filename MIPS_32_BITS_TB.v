@@ -2,28 +2,22 @@
 
 module MIPS_32_BITS_TB();
 
-//Conexiones
 reg clk = 1;
-wire [31:0]resultadoAlu;
-
-//Señales de estímulo
 
 MIPS_32_BITS DUV(
-	.clk(clk),
-	.resultadoAlu(resultadoAlu)
+	.clk(clk)
 );
 
 always #10 clk = !clk;
 initial
 	begin
 		
-		#20;
-		#20;
-		#20;
-		#20;
-		#20;
-		#20;
-		
+		#40;
+		#40;
+		#40;
+		#40;
+		#40;
+		#40;
 		$stop;
 		
 	end

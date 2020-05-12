@@ -1,7 +1,6 @@
 
 module MIPS_32_BITS(  
 	input clk
-	//output [31:0]resultadoAlu
 );
 
  //conexiones 

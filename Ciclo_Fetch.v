@@ -24,7 +24,7 @@ always @(posedge clk)
 	
 initial
 	begin
-		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS\\MIPS_32_BITS-master\\Instrucciones.txt", MEM);
+		$readmemb("C:\\Verilog\\Proyecto\\MIPS_32_BITS\\Instrucciones.mem", MEM);
 	end
  
   assign Sal = {MEM[Dir],MEM[Dir+1],MEM[Dir+2],MEM[Dir+3]}; // se concatena
