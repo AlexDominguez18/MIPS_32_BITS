@@ -1,22 +1,16 @@
-Analysis & Synthesis report for MIPS_32_BITS
-Mon May 11 14:07:02 2020
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Analysis & Elaboration report for MIPS_32_BITS
+Sat May 16 23:38:03 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -40,31 +34,47 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
+; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 11 14:07:01 2020       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Analysis & Elaboration Status      ; Successful - Sat May 16 23:38:03 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_32_BITS                                ;
-; Top-level Entity Name              ; MIPS_32_BITS                                ;
+; Top-level Entity Name              ; MIPS_32_BITS_TB                             ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 1                                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; MIPS_32_BITS       ; MIPS_32_BITS       ;
+; Top-level entity name                                            ; MIPS_32_BITS_TB    ; MIPS_32_BITS       ;
 ; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -144,270 +154,141 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; Ciclo_Fetch.v                    ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v     ;         ;
-; Banco_Registros.v                ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Banco_Registros.v ;         ;
-; ALU_Control.v                    ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v     ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v             ;         ;
-; Unidad_Control.v                 ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v  ;         ;
-; Memoria_datos.v                  ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v   ;         ;
-; Mux.v                            ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux.v             ;         ;
-; Mux2.v                           ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux2.v            ;         ;
-; Shift_Left2.v                    ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Shift_Left2.v     ;         ;
-; Sign_Extend.v                    ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Sign_Extend.v     ;         ;
-; MIPS_32_BITS.v                   ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v    ;         ;
-; AND_.v                           ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/AND_.v            ;         ;
-; Buffer1.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer1.v         ;         ;
-; Buffer2.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer2.v         ;         ;
-; Buffer3.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer3.v         ;         ;
-; Buffer4.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer4.v         ;         ;
-; Sumador.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Proyecto/MIPS_32_BITS/Sumador.v         ;         ;
-; br.txt                           ; yes             ; Auto-Found File        ; C:/Verilog/Proyecto/MIPS_32_BITS/br.txt            ;         ;
-; instrucciones.txt                ; yes             ; Auto-Found File        ; C:/Verilog/Proyecto/MIPS_32_BITS/instrucciones.txt ;         ;
-; memoriadatos.txt                 ; yes             ; Auto-Found File        ; C:/Verilog/Proyecto/MIPS_32_BITS/memoriadatos.txt  ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-; |MIPS_32_BITS              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |MIPS_32_BITS       ; MIPS_32_BITS ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 1                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon May 11 14:06:41 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_32_BITS -c MIPS_32_BITS
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat May 16 23:37:40 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_32_BITS -c MIPS_32_BITS --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ciclo_fetch.v
-    Info (12023): Found entity 1: Ciclo_Fetch File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 2
+    Info (12023): Found entity 1: Ciclo_Fetch File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Ciclo_Fetch.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file banco_registros.v
-    Info (12023): Found entity 1: Banco_Registros File: C:/Verilog/Proyecto/MIPS_32_BITS/Banco_Registros.v Line: 2
+    Info (12023): Found entity 1: Banco_Registros File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Banco_Registros.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu_control.v
-    Info (12023): Found entity 1: ALU_Control File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 2
+    Info (12023): Found entity 1: ALU_Control File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v Line: 2
+    Info (12023): Found entity 1: ALU File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file unidad_control.v
-    Info (12023): Found entity 1: Unidad_Control File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 2
+    Info (12023): Found entity 1: Unidad_Control File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file memoria_datos.v
-    Info (12023): Found entity 1: Memoria_datos File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 2
-Warning (12090): Entity "Mux" obtained from "Mux.v" instead of from Quartus Prime megafunction library File: C:/Verilog/Proyecto/MIPS_32_BITS/Mux.v Line: 2
+    Info (12023): Found entity 1: Memoria_datos File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 2
+Warning (12090): Entity "Mux" obtained from "Mux.v" instead of from Quartus Prime megafunction library File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Mux.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux.v
-    Info (12023): Found entity 1: Mux File: C:/Verilog/Proyecto/MIPS_32_BITS/Mux.v Line: 2
+    Info (12023): Found entity 1: Mux File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Mux.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
-    Info (12023): Found entity 1: Mux2 File: C:/Verilog/Proyecto/MIPS_32_BITS/Mux2.v Line: 2
+    Info (12023): Found entity 1: Mux2 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Mux2.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file shift_left2.v
-    Info (12023): Found entity 1: Shift_Left2 File: C:/Verilog/Proyecto/MIPS_32_BITS/Shift_Left2.v Line: 2
+    Info (12023): Found entity 1: Shift_Left2 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Shift_Left2.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.v
-    Info (12023): Found entity 1: Sign_Extend File: C:/Verilog/Proyecto/MIPS_32_BITS/Sign_Extend.v Line: 2
+    Info (12023): Found entity 1: Sign_Extend File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Sign_Extend.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mips_32_bits.v
-    Info (12023): Found entity 1: MIPS_32_BITS File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 2
+    Info (12023): Found entity 1: MIPS_32_BITS File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file and_.v
-    Info (12023): Found entity 1: AND_ File: C:/Verilog/Proyecto/MIPS_32_BITS/AND_.v Line: 2
+    Info (12023): Found entity 1: AND_ File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/AND_.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file buffer1.v
-    Info (12023): Found entity 1: Buffer1 File: C:/Verilog/Proyecto/MIPS_32_BITS/Buffer1.v Line: 2
+    Info (12023): Found entity 1: Buffer1 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Buffer1.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file buffer2.v
-    Info (12023): Found entity 1: Buffer2 File: C:/Verilog/Proyecto/MIPS_32_BITS/Buffer2.v Line: 2
+    Info (12023): Found entity 1: Buffer2 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Buffer2.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file buffer3.v
-    Info (12023): Found entity 1: Buffer3 File: C:/Verilog/Proyecto/MIPS_32_BITS/Buffer3.v Line: 2
+    Info (12023): Found entity 1: Buffer3 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Buffer3.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file buffer4.v
-    Info (12023): Found entity 1: Buffer4 File: C:/Verilog/Proyecto/MIPS_32_BITS/Buffer4.v Line: 2
+    Info (12023): Found entity 1: Buffer4 File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Buffer4.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sumador.v
-    Info (12023): Found entity 1: Sumador File: C:/Verilog/Proyecto/MIPS_32_BITS/Sumador.v Line: 2
+    Info (12023): Found entity 1: Sumador File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Sumador.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mips_32_bits_tb.v
-    Info (12023): Found entity 1: MIPS_32_BITS_TB File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS_TB.v Line: 3
-Info (12127): Elaborating entity "MIPS_32_BITS" for the top level hierarchy
-Info (12128): Elaborating entity "Ciclo_Fetch" for hierarchy "Ciclo_Fetch:a1" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 31
-Warning (10230): Verilog HDL assignment warning at Ciclo_Fetch.v(15): truncated value with size 32 to match size of target (7) File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 15
-Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(27): number of words (32) in memory file does not match the number of elements in the address range [0:127] File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 27
-Warning (10855): Verilog HDL warning at Ciclo_Fetch.v(26): initial value for variable MEM should be constant File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 26
-Warning (10030): Net "MEM" at Ciclo_Fetch.v(11) has no driver or initial value, using a default initial value '0' File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 11
-Info (12128): Elaborating entity "Buffer1" for hierarchy "Buffer1:a2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 43
-Info (12128): Elaborating entity "Unidad_Control" for hierarchy "Unidad_Control:a3" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 55
-Warning (10270): Verilog HDL Case Statement warning at Unidad_Control.v(15): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "Branch", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemRead", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "ALUOP", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemWrite", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "ALUSrc", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "RegWrite", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "RegDst", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemtoReg", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "MemtoReg" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "RegDst" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "RegWrite" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "ALUSrc" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "MemWrite" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "ALUOP[0]" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "ALUOP[1]" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "MemRead" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (10041): Inferred latch for "Branch" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (12128): Elaborating entity "Banco_Registros" for hierarchy "Banco_Registros:a4" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 65
-Info (12128): Elaborating entity "Sign_Extend" for hierarchy "Sign_Extend:a5" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 70
-Info (12128): Elaborating entity "Buffer2" for hierarchy "Buffer2:a6" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 103
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:num1" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 110
-Info (12128): Elaborating entity "Shift_Left2" for hierarchy "Shift_Left2:a7" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 115
-Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:a8" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 121
-Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(14): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 14
-Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(11): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at ALU_Control.v(11): inferring latch(es) for variable "Sel", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (10041): Inferred latch for "Sel[0]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (10041): Inferred latch for "Sel[1]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (10041): Inferred latch for "Sel[2]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (10041): Inferred latch for "Sel[3]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (12128): Elaborating entity "Sumador" for hierarchy "Sumador:a9" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 127
-Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:num2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 134
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:a10" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 142
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "zero_flag", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v Line: 11
-Info (10041): Inferred latch for "zero_flag" at ALU.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v Line: 11
-Info (12128): Elaborating entity "Buffer3" for hierarchy "Buffer3:a11" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 166
-Info (12128): Elaborating entity "Memoria_datos" for hierarchy "Memoria_datos:a12" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 174
-Warning (10850): Verilog HDL warning at Memoria_datos.v(14): number of words (1) in memory file does not match the number of elements in the address range [0:31] File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 14
-Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(19): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 19
-Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(28): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at Memoria_datos.v(28): inferring latch(es) for variable "Read_Data", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[0]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[1]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[2]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[3]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[4]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[5]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[6]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[7]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[8]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[9]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[10]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[11]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[12]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[13]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[14]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[15]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[16]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[17]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[18]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[19]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[20]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[21]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[22]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[23]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[24]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[25]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[26]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[27]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[28]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[29]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[30]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (10041): Inferred latch for "Read_Data[31]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (12128): Elaborating entity "Buffer4" for hierarchy "Buffer4:a13" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 188
-Info (12128): Elaborating entity "AND_" for hierarchy "AND_:a14" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 201
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 4
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4749 megabytes
-    Info: Processing ended: Mon May 11 14:07:02 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (12023): Found entity 1: MIPS_32_BITS_TB File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS_TB.v Line: 3
+Info (12127): Elaborating entity "MIPS_32_BITS_TB" for the top level hierarchy
+Warning (10755): Verilog HDL warning at MIPS_32_BITS_TB.v(11): assignments to clk create a combinational loop File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS_TB.v Line: 11
+Warning (10175): Verilog HDL warning at MIPS_32_BITS_TB.v(26): ignoring unsupported system task File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS_TB.v Line: 26
+Info (12128): Elaborating entity "MIPS_32_BITS" for hierarchy "MIPS_32_BITS:DUV" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS_TB.v Line: 9
+Info (12128): Elaborating entity "Ciclo_Fetch" for hierarchy "MIPS_32_BITS:DUV|Ciclo_Fetch:a1" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 31
+Warning (10230): Verilog HDL assignment warning at Ciclo_Fetch.v(15): truncated value with size 32 to match size of target (7) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Ciclo_Fetch.v Line: 15
+Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(27): number of words (256) in memory file does not match the number of elements in the address range [0:127] File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Ciclo_Fetch.v Line: 27
+Info (12128): Elaborating entity "Buffer1" for hierarchy "MIPS_32_BITS:DUV|Buffer1:a2" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 43
+Info (12128): Elaborating entity "Unidad_Control" for hierarchy "MIPS_32_BITS:DUV|Unidad_Control:a3" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 55
+Warning (10270): Verilog HDL Case Statement warning at Unidad_Control.v(15): incomplete case statement has no default case item File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "RegDst", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "Branch", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemRead", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemtoReg", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "ALUOP", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "MemWrite", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "ALUSrc", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "RegWrite", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "RegWrite" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "ALUSrc" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "MemWrite" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "ALUOP[0]" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "ALUOP[1]" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "ALUOP[2]" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "MemtoReg" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "MemRead" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "Branch" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (10041): Inferred latch for "RegDst" at Unidad_Control.v(15) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 15
+Info (12128): Elaborating entity "Banco_Registros" for hierarchy "MIPS_32_BITS:DUV|Banco_Registros:a4" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 65
+Info (12128): Elaborating entity "Sign_Extend" for hierarchy "MIPS_32_BITS:DUV|Sign_Extend:a5" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 70
+Info (12128): Elaborating entity "Buffer2" for hierarchy "MIPS_32_BITS:DUV|Buffer2:a6" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 103
+Info (12128): Elaborating entity "Mux" for hierarchy "MIPS_32_BITS:DUV|Mux:num1" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 110
+Info (12128): Elaborating entity "Shift_Left2" for hierarchy "MIPS_32_BITS:DUV|Shift_Left2:a7" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 115
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "MIPS_32_BITS:DUV|ALU_Control:a8" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 121
+Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(14): incomplete case statement has no default case item File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 14
+Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(11): incomplete case statement has no default case item File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at ALU_Control.v(11): inferring latch(es) for variable "Sel", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Info (10041): Inferred latch for "Sel[0]" at ALU_Control.v(11) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Info (10041): Inferred latch for "Sel[1]" at ALU_Control.v(11) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Info (10041): Inferred latch for "Sel[2]" at ALU_Control.v(11) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Info (10041): Inferred latch for "Sel[3]" at ALU_Control.v(11) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/ALU_Control.v Line: 11
+Info (12128): Elaborating entity "Sumador" for hierarchy "MIPS_32_BITS:DUV|Sumador:a9" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 127
+Info (12128): Elaborating entity "Mux2" for hierarchy "MIPS_32_BITS:DUV|Mux2:num2" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 134
+Info (12128): Elaborating entity "ALU" for hierarchy "MIPS_32_BITS:DUV|ALU:a10" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 142
+Info (12128): Elaborating entity "Buffer3" for hierarchy "MIPS_32_BITS:DUV|Buffer3:a11" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 166
+Info (12128): Elaborating entity "Memoria_datos" for hierarchy "MIPS_32_BITS:DUV|Memoria_datos:a12" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 174
+Warning (10850): Verilog HDL warning at Memoria_datos.v(14): number of words (1) in memory file does not match the number of elements in the address range [0:31] File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 14
+Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(19): incomplete case statement has no default case item File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 19
+Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(28): incomplete case statement has no default case item File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at Memoria_datos.v(28): inferring latch(es) for variable "Read_Data", which holds its previous value in one or more paths through the always construct File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[0]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[1]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[2]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[3]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[4]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[5]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[6]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[7]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[8]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[9]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[10]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[11]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[12]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[13]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[14]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[15]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[16]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[17]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[18]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[19]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[20]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[21]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[22]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[23]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[24]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[25]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[26]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[27]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[28]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[29]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[30]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (10041): Inferred latch for "Read_Data[31]" at Memoria_datos.v(28) File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/Memoria_datos.v Line: 28
+Info (12128): Elaborating entity "Buffer4" for hierarchy "MIPS_32_BITS:DUV|Buffer4:a13" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 188
+Info (12128): Elaborating entity "AND_" for hierarchy "MIPS_32_BITS:DUV|AND_:a14" File: C:/Arquitectura/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 201
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Sat May 16 23:38:03 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:52
 
 

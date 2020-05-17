@@ -1,7 +1,7 @@
 
 module ALU_Control(
 	input [5:0]Funct,
-	input [1:0]ALUOP,
+	input [2:0]ALUOP,
 	output reg[3:0]Sel
 );
 
@@ -10,9 +10,15 @@ module ALU_Control(
 always @*
 	case(ALUOP)
 	
-	2'b 10: //Tipo R
+	3'b 010: //Tipo R
 			case(Funct)
 			
+			//SUMA
+			6'b 000000:
+				begin
+					Sel = 4'b 0000;
+				end
+				
 			//SUMA
 			6'b 100000:
 				begin
@@ -68,6 +74,37 @@ always @*
 				end 
 				
 			endcase
+			
+	3'b 000: // sw y lw
+	
+			begin
+					Sel = 4'b 0001; //SUMA
+			end
+			
+	3'b 001: // Branch equal
+	
+			begin
+					Sel = 4'b 0010; //RESTA
+			end
+			
+	3'b 011: // ANDI
+	
+			begin
+					Sel = 4'b 0101; //AND
+			end
+			
+	3'b 100: // STLI
+	
+			begin
+					Sel = 4'b 1000; //STL
+			end
+			
+	3'b 101: // ORI
+	
+			begin
+					Sel = 4'b 0110; //OR
+			end
+			
 		endcase
 
 endmodule 

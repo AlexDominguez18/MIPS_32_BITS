@@ -11,7 +11,7 @@ module MIPS_32_BITS(
  wire [15:0]CJump;
  wire [4:0]CRS,CRT,CRD,CRT2,CRD2,Mux_BFF,CWR,WR_BR;
  wire [3:0]Sel_B, B_ALU;
- wire [1:0]ALUOP,ALUOP1;
+ wire [2:0]ALUOP,ALUOP1;
  
 //Conexiones del control
  wire [31:0]Mux_PC;

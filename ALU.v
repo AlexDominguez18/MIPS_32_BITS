@@ -10,6 +10,11 @@ module ALU(
 always @*
 		case(Sel)
 		
+		4'b 0000:
+			begin
+				Res = 32'd 0;
+				zero_flag = (Res == 32'd 0);
+			end
 		4'b 0001:
 			begin
 				Res = A + B;
