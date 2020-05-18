@@ -69,10 +69,10 @@ always @*
 	//BEQ
 	6'b 000100:
 		begin
-			//RegDst = 1'b 1;
+			RegDst = 1'b 1;
 			Branch = 1'b 1;
 			MemRead = 1'b 0;
-			//MemtoReg = 1'b 0;
+			MemtoReg = 1'b 0;
 			ALUOP = 3'b 001;
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 0;

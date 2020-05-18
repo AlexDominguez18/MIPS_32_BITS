@@ -8,6 +8,7 @@ module ALU(
 
 
 always @*
+begin
 		case(Sel)
 		
 		4'b 0000:
@@ -72,4 +73,5 @@ always @*
 			end
 
 		endcase
+end
 endmodule 

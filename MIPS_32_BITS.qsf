@@ -1,6 +1,6 @@
-set_global_assignment -name TOP_LEVEL_ENTITY MIPS_32_BITS_TB
+set_global_assignment -name TOP_LEVEL_ENTITY MIPS_32_BITS
 
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
 set_global_assignment -name DEVICE Auto
 set_global_assignment -name FAMILY "Cyclone 10 LP"
 set_global_assignment -name VERILOG_FILE Ciclo_Fetch.v
