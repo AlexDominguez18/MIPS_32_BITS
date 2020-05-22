@@ -29,6 +29,7 @@ module MIPS_32_BITS(
 	.Sal(MEM_B),
 	.Fetch(CFetch1)
 );
+
  
  Buffer1 a2(
 	.in(MEM_B),

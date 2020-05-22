@@ -7,7 +7,7 @@ module Shift_Left2(
 
 always @*
 	begin
-	   out = {in[29:0], 2'b 00};
+	   out = in << 2;
 	end
 
 endmodule 

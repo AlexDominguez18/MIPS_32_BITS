@@ -1,0 +1,6 @@
+
+module Sumador4(
+	input [6:0]pcInput,
+	output reg pcOut
+);
+

@@ -4,6 +4,6 @@ module AND_(
 		output Sal
 );
 
-assign Sal = A & B;
+ assign Sal = A&B;
 
 endmodule 

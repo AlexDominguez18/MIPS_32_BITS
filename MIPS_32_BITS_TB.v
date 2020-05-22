@@ -12,8 +12,8 @@ always #10 clk = !clk;
 initial
 	begin
 		
-		#80;
-		#160;		
+		#60;
+		#400;		
 		
 		$stop;
 		

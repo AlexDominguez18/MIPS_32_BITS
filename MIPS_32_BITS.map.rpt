@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_32_BITS
-Mon May 18 13:32:39 2020
+Tue May 19 23:32:45 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 18 13:32:39 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 19 23:32:45 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_32_BITS                                ;
 ; Top-level Entity Name              ; MIPS_32_BITS                                ;
@@ -157,36 +157,36 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
-; Ciclo_Fetch.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v      ;         ;
-; Banco_Registros.v                ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Banco_Registros.v  ;         ;
-; ALU_Control.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v      ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v              ;         ;
-; Unidad_Control.v                 ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v   ;         ;
-; Memoria_datos.v                  ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v    ;         ;
-; Mux.v                            ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux.v              ;         ;
-; Mux2.v                           ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux2.v             ;         ;
-; Shift_Left2.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Shift_Left2.v      ;         ;
-; Sign_Extend.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Sign_Extend.v      ;         ;
-; MIPS_32_BITS.v                   ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v     ;         ;
-; AND_.v                           ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/AND_.v             ;         ;
-; Buffer1.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer1.v          ;         ;
-; Buffer2.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer2.v          ;         ;
-; Buffer3.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer3.v          ;         ;
-; Buffer4.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer4.v          ;         ;
-; Sumador.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Sumador.v          ;         ;
-; br.mem                           ; yes             ; Auto-Found Unspecified File  ; C:/Verilog/Proyecto/MIPS_32_BITS/br.mem             ;         ;
-; testf2_meminst.mem               ; yes             ; Auto-Found Unspecified File  ; C:/Verilog/Proyecto/MIPS_32_BITS/testf2_meminst.mem ;         ;
-; memoriadatos.txt                 ; yes             ; Auto-Found File              ; C:/Verilog/Proyecto/MIPS_32_BITS/memoriadatos.txt   ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; Ciclo_Fetch.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v     ;         ;
+; Banco_Registros.v                ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Banco_Registros.v ;         ;
+; ALU_Control.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v     ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/ALU.v             ;         ;
+; Unidad_Control.v                 ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v  ;         ;
+; Memoria_datos.v                  ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v   ;         ;
+; Mux.v                            ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux.v             ;         ;
+; Mux2.v                           ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Mux2.v            ;         ;
+; Shift_Left2.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Shift_Left2.v     ;         ;
+; Sign_Extend.v                    ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Sign_Extend.v     ;         ;
+; MIPS_32_BITS.v                   ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v    ;         ;
+; AND_.v                           ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/AND_.v            ;         ;
+; Buffer1.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer1.v         ;         ;
+; Buffer2.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer2.v         ;         ;
+; Buffer3.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer3.v         ;         ;
+; Buffer4.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Buffer4.v         ;         ;
+; Sumador.v                        ; yes             ; User Verilog HDL File        ; C:/Verilog/Proyecto/MIPS_32_BITS/Sumador.v         ;         ;
+; br.mem                           ; yes             ; Auto-Found Unspecified File  ; C:/Verilog/Proyecto/MIPS_32_BITS/br.mem            ;         ;
+; instrucciones.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Verilog/Proyecto/MIPS_32_BITS/instrucciones.mem ;         ;
+; memoriadatos.txt                 ; yes             ; Auto-Found File              ; C:/Verilog/Proyecto/MIPS_32_BITS/memoriadatos.txt  ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -262,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -272,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon May 18 13:32:04 2020
+    Info: Processing started: Tue May 19 23:32:32 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_32_BITS -c MIPS_32_BITS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -313,12 +313,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file sumador
     Info (12023): Found entity 1: Sumador File: C:/Verilog/Proyecto/MIPS_32_BITS/Sumador.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mips_32_bits_tb.v
     Info (12023): Found entity 1: MIPS_32_BITS_TB File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS_TB.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file sumador4.v
+    Info (12023): Found entity 1: Sumador4 File: C:/Verilog/Proyecto/MIPS_32_BITS/Sumador4.v Line: 2
 Info (12127): Elaborating entity "MIPS_32_BITS" for the top level hierarchy
 Info (12128): Elaborating entity "Ciclo_Fetch" for hierarchy "Ciclo_Fetch:a1" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 31
-Warning (10230): Verilog HDL assignment warning at Ciclo_Fetch.v(15): truncated value with size 32 to match size of target (7) File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 15
-Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(27): number of words (256) in memory file does not match the number of elements in the address range [0:127] File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 27
-Info (12128): Elaborating entity "Buffer1" for hierarchy "Buffer1:a2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 43
-Info (12128): Elaborating entity "Unidad_Control" for hierarchy "Unidad_Control:a3" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 55
+Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(35): number of words (256) in memory file does not match the number of elements in the address range [0:127] File: C:/Verilog/Proyecto/MIPS_32_BITS/Ciclo_Fetch.v Line: 35
+Info (12128): Elaborating entity "Buffer1" for hierarchy "Buffer1:a2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 44
+Info (12128): Elaborating entity "Unidad_Control" for hierarchy "Unidad_Control:a3" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 56
 Warning (10270): Verilog HDL Case Statement warning at Unidad_Control.v(15): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
 Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "RegDst", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
 Warning (10240): Verilog HDL Always Construct warning at Unidad_Control.v(15): inferring latch(es) for variable "Branch", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
@@ -338,12 +339,12 @@ Info (10041): Inferred latch for "MemtoReg" at Unidad_Control.v(15) File: C:/Ver
 Info (10041): Inferred latch for "MemRead" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
 Info (10041): Inferred latch for "Branch" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
 Info (10041): Inferred latch for "RegDst" at Unidad_Control.v(15) File: C:/Verilog/Proyecto/MIPS_32_BITS/Unidad_Control.v Line: 15
-Info (12128): Elaborating entity "Banco_Registros" for hierarchy "Banco_Registros:a4" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 65
-Info (12128): Elaborating entity "Sign_Extend" for hierarchy "Sign_Extend:a5" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 70
-Info (12128): Elaborating entity "Buffer2" for hierarchy "Buffer2:a6" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 103
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:num1" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 110
-Info (12128): Elaborating entity "Shift_Left2" for hierarchy "Shift_Left2:a7" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 115
-Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:a8" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 121
+Info (12128): Elaborating entity "Banco_Registros" for hierarchy "Banco_Registros:a4" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 66
+Info (12128): Elaborating entity "Sign_Extend" for hierarchy "Sign_Extend:a5" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 71
+Info (12128): Elaborating entity "Buffer2" for hierarchy "Buffer2:a6" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 104
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:num1" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 111
+Info (12128): Elaborating entity "Shift_Left2" for hierarchy "Shift_Left2:a7" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 116
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:a8" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 122
 Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(14): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 14
 Warning (10270): Verilog HDL Case Statement warning at ALU_Control.v(11): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
 Warning (10240): Verilog HDL Always Construct warning at ALU_Control.v(11): inferring latch(es) for variable "Sel", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
@@ -351,11 +352,11 @@ Info (10041): Inferred latch for "Sel[0]" at ALU_Control.v(11) File: C:/Verilog/
 Info (10041): Inferred latch for "Sel[1]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
 Info (10041): Inferred latch for "Sel[2]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
 Info (10041): Inferred latch for "Sel[3]" at ALU_Control.v(11) File: C:/Verilog/Proyecto/MIPS_32_BITS/ALU_Control.v Line: 11
-Info (12128): Elaborating entity "Sumador" for hierarchy "Sumador:a9" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 127
-Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:num2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 134
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:a10" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 142
-Info (12128): Elaborating entity "Buffer3" for hierarchy "Buffer3:a11" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 166
-Info (12128): Elaborating entity "Memoria_datos" for hierarchy "Memoria_datos:a12" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 174
+Info (12128): Elaborating entity "Sumador" for hierarchy "Sumador:a9" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 128
+Info (12128): Elaborating entity "Mux2" for hierarchy "Mux2:num2" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 135
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:a10" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 143
+Info (12128): Elaborating entity "Buffer3" for hierarchy "Buffer3:a11" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 167
+Info (12128): Elaborating entity "Memoria_datos" for hierarchy "Memoria_datos:a12" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 175
 Warning (10850): Verilog HDL warning at Memoria_datos.v(14): number of words (1) in memory file does not match the number of elements in the address range [0:31] File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 14
 Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(19): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 19
 Warning (10270): Verilog HDL Case Statement warning at Memoria_datos.v(28): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
@@ -392,8 +393,8 @@ Info (10041): Inferred latch for "Read_Data[28]" at Memoria_datos.v(28) File: C:
 Info (10041): Inferred latch for "Read_Data[29]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
 Info (10041): Inferred latch for "Read_Data[30]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
 Info (10041): Inferred latch for "Read_Data[31]" at Memoria_datos.v(28) File: C:/Verilog/Proyecto/MIPS_32_BITS/Memoria_datos.v Line: 28
-Info (12128): Elaborating entity "Buffer4" for hierarchy "Buffer4:a13" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 188
-Info (12128): Elaborating entity "AND_" for hierarchy "AND_:a14" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 201
+Info (12128): Elaborating entity "Buffer4" for hierarchy "Buffer4:a13" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 189
+Info (12128): Elaborating entity "AND_" for hierarchy "AND_:a14" File: C:/Verilog/Proyecto/MIPS_32_BITS/MIPS_32_BITS.v Line: 202
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
@@ -401,10 +402,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Mon May 18 13:32:39 2020
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:01:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4742 megabytes
+    Info: Processing ended: Tue May 19 23:32:45 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:32
 
 
