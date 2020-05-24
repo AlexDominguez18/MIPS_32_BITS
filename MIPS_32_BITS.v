@@ -6,7 +6,8 @@ module MIPS_32_BITS(
  //conexiones 
  wire [31:0]MEM_B, RD1_B,RD2_B,CA,CB,CRes,CFetch1,CFetch2,CFetch3,Res_Mem;
  wire [31:0]Shift_Sum, Sum_BFF3,MuxALU,J_BFF2,CJump2,WD_Mem,Mem_BFF4,AMux3,BMux3,Mux3_BR;
- wire [31:0]Fetch_Mux4,FetchB_Mux4;
+ wire [31:0]Fetch_Mux4,Fetch_Mux4_2,Fetch_Mux4_3,Fetch_Mux4_4,FetchB_Mux4,mux4_mux5,SL_mux5,BFF2_mux5,BFF2_mux52,jumpAddress,jumpAddress2;
+ wire [25:0]target;
  wire [5:0]COpcode;
  wire [15:0]CJump;
  wire [4:0]CRS,CRT,CRD,CRT2,CRD2,Mux_BFF,CWR,WR_BR;
@@ -15,16 +16,16 @@ module MIPS_32_BITS(
  
 //Conexiones del control
  wire [31:0]Mux_PC;
- wire ZF,ZF_AND,PCSrc,RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite;
- wire RegDst1,Branch1,MemRead1,MemtoReg1,MemWrite1,ALUSrc1,RegWrite1;
- wire Branch2,MemRead2,MemtoReg2,MemWrite2,RegWrite2,  MemtoReg3,RegWrite3;
+ wire ZF,ZF_AND,PCSrc,RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,Jump;
+ wire RegDst1,Branch1,MemRead1,MemtoReg1,MemWrite1,ALUSrc1,RegWrite1,Jump1;
+ wire Branch2,MemRead2,MemtoReg2,MemWrite2,RegWrite2,Jump2,  MemtoReg3,RegWrite3;
  
  
  //instancias
  
  Ciclo_Fetch a1(
 	.out(Fetch_Mux4),
-	.Dir(Mux_PC),
+	.DirEntrada(Mux_PC),
 	.clk(clk),
 	.Sal(MEM_B),
 	.Fetch(CFetch1)
@@ -35,12 +36,15 @@ module MIPS_32_BITS(
 	.in(MEM_B),
 	.clk(clk),
 	.Fetch(CFetch1),
+	.contadorPc(Fetch_Mux4),
 	.RS(CRS),
 	.RT(CRT),
 	.RD(CRD),
 	.Opcode(COpcode),
 	.Jump(CJump),
-	.SFetch(CFetch2)
+	.SFetch(CFetch2),
+	.out(target),
+	.SContadorPc(Fetch_Mux4_2)
 );
  
  Unidad_Control a3(
@@ -52,7 +56,8 @@ module MIPS_32_BITS(
    .MemtoReg(MemtoReg),
 	.MemWrite(MemWrite),
 	.ALUSrc(ALUSrc),
-	.RegWrite(RegWrite)
+	.RegWrite(RegWrite),
+	.Jump(Jump)
 );
  
  Banco_Registros a4(
@@ -82,6 +87,9 @@ Buffer2 a6(
 	.Jump(J_BFF2),
 	.RT(CRT),
 	.RD(CRD),
+	.target(SL_mux5),
+	.contadorPc(Fetch_Mux4_2),
+	.ControlJump(Jump),
 	.SRD(CRD2),
 	.SRT(CRT2),
 	.SJump(CJump2),
@@ -100,7 +108,10 @@ Buffer2 a6(
    .SMemtoReg(MemtoReg1),
 	.SMemWrite(MemWrite1),
 	.SALUSrc(ALUSrc1),
-	.SRegWrite(RegWrite1)
+	.SRegWrite(RegWrite1),
+	.SControlJump(Jump1),
+	.Starget(jumpAddress),
+	.SContadorPc(Fetch_Mux4_3)
 );
 				
 Mux num1(
@@ -149,8 +160,11 @@ Buffer3 a11(
 	.zero_flag(ZF),
 	.SRes_ALU(Res_Mem),
 	.Write_Data(CB),
+	.contadorPc(Fetch_Mux4_3),
+	.ControlJump(Jump1),
 	.Sal_zf(ZF_AND),
 	.Write_Reg(Mux_BFF),
+	.target(jumpAddress),
 	.Sal_WR(CWR),
 	.SFetch(FetchB_Mux4),
 	.SalWD(WD_Mem),
@@ -163,7 +177,10 @@ Buffer3 a11(
 	.SMemRead(MemRead2),
 	.SMemtoReg(MemtoReg2),
 	.SMemWrite(MemWrite2),
-	.SRegWrite(RegWrite2)
+	.SRegWrite(RegWrite2),
+	.SControlJump(Jump2),
+	.Starget(jumpAddress2),
+	.SContadorPc(Fetch_Mux4_4)
 );
 				
  Memoria_datos a12(
@@ -202,11 +219,22 @@ AND_ a14(
 );
  
  Mux2 num4(
-	.A(Fetch_Mux4),
+	.A(Fetch_Mux4_4),
 	.B(FetchB_Mux4),
 	.in(PCSrc),
-	.Sal(Mux_PC)
+	.Sal(mux4_mux5)//mux4_mux5
 );
-				
+	
+ Mux2 num5(
+	.B(jumpAddress2),
+	.A(mux4_mux5),
+	.in(Jump2),
+	.Sal(Mux_PC)
+);	
+
+Shift_Left2_2 a15(
+	.in(target),
+	.out(SL_mux5[27:0])
+);
  
 endmodule

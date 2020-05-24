@@ -8,7 +8,8 @@ module Unidad_Control(
 	output reg [2:0]ALUOP,
 	output reg MemWrite,
 	output reg ALUSrc,
-	output reg RegWrite
+	output reg RegWrite,
+	output reg Jump
 );
 
 always @*
@@ -25,6 +26,13 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 0;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
+		end
+	
+	//Formato J
+	6'b 000010:
+		begin
+			Jump = 1'b 1;
 		end
 		
 	//LW
@@ -38,6 +46,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	//LWC1
@@ -51,6 +60,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	//SW
@@ -64,6 +74,7 @@ always @*
 			MemWrite = 1'b 1;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 0;
+			Jump = 1'b 0;
 		end
 		
 	//BEQ
@@ -77,6 +88,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 0;
 			RegWrite = 1'b 0;
+			Jump = 1'b 0;
 		end
 		
 	//ADDI
@@ -90,6 +102,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	//STLI
@@ -103,6 +116,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	//ANDI
@@ -116,6 +130,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	//ORI
@@ -129,6 +144,7 @@ always @*
 			MemWrite = 1'b 0;
 			ALUSrc = 1'b 1;
 			RegWrite = 1'b 1;
+			Jump = 1'b 0;
 		end
 		
 	endcase

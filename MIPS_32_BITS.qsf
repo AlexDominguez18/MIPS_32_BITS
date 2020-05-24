@@ -30,6 +30,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME MIPS_32_BITS_TB -section_id eda_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MIPS_32_BITS_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME MIPS_32_BITS_TB -section_id MIPS_32_BITS_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE MIPS_32_BITS_TB.v -section_id MIPS_32_BITS_TB
+set_global_assignment -name VERILOG_FILE Shift_Left2_2.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
