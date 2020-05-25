@@ -14,21 +14,20 @@ module Ciclo_Fetch(
 initial
 	begin
 		pc = 7'd 0;
-		DirSalida = pc;
 	end
 	
 always @(posedge clk)
  begin
-		if (pc == 7'd 0)
+		if (DirEntrada >= 32'd 0 )
 			begin
-				pc = pc + 7'd 4;
+				DirSalida = DirEntrada;
 			end
 		else
 			begin
-				DirSalida = DirEntrada;
-				pc = DirSalida[6:0];
-				pc = pc + 7'd 4;
+				DirSalida = 32'd 0;
 			end
+		pc = DirSalida;
+		pc = pc + 7'd 4;
 		out=pc;
 		Fetch=pc;
  end

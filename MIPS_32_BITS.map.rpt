@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_32_BITS
-Sun May 24 16:19:45 2020
+Mon May 25 16:32:19 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "Buffer2:a6"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Shift_Left2_2:a15"
+ 10. Port Connectivity Checks: "Buffer2:a6"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 24 16:19:45 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 25 16:32:19 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_32_BITS                                ;
 ; Top-level Entity Name              ; MIPS_32_BITS                                ;
@@ -158,7 +159,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -246,6 +247,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Shift_Left2_2:a15"                                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                    ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; out  ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (28 bits) it drives; bit(s) "out[31..28]" have no fanouts ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Buffer2:a6"                                                                                                                                                                         ;
 +--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -272,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -282,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun May 24 16:19:13 2020
+    Info: Processing started: Mon May 25 16:32:00 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_32_BITS -c MIPS_32_BITS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -327,7 +337,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file shift_l
     Info (12023): Found entity 1: Shift_Left2_2 File: C:/Verilog/Proyecto/MIPS_32_BITS-master/Shift_Left2_2.v Line: 2
 Info (12127): Elaborating entity "MIPS_32_BITS" for the top level hierarchy
 Info (12128): Elaborating entity "Ciclo_Fetch" for hierarchy "Ciclo_Fetch:a1" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 32
-Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(38): number of words (256) in memory file does not match the number of elements in the address range [0:127] File: C:/Verilog/Proyecto/MIPS_32_BITS-master/Ciclo_Fetch.v Line: 38
+Warning (10850): Verilog HDL warning at Ciclo_Fetch.v(37): number of words (256) in memory file does not match the number of elements in the address range [0:127] File: C:/Verilog/Proyecto/MIPS_32_BITS-master/Ciclo_Fetch.v Line: 37
 Info (12128): Elaborating entity "Buffer1" for hierarchy "Buffer1:a2" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 48
 Info (12128): Elaborating entity "Unidad_Control" for hierarchy "Unidad_Control:a3" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 61
 Warning (10270): Verilog HDL Case Statement warning at Unidad_Control.v(16): incomplete case statement has no default case item File: C:/Verilog/Proyecto/MIPS_32_BITS-master/Unidad_Control.v Line: 16
@@ -407,7 +417,7 @@ Info (10041): Inferred latch for "Read_Data[31]" at Memoria_datos.v(21) File: C:
 Info (12128): Elaborating entity "Buffer4" for hierarchy "Buffer4:a13" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 206
 Info (12128): Elaborating entity "AND_" for hierarchy "AND_:a14" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 219
 Info (12128): Elaborating entity "Shift_Left2_2" for hierarchy "Shift_Left2_2:a15" File: C:/Verilog/Proyecto/MIPS_32_BITS-master/MIPS_32_BITS.v Line: 238
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
@@ -416,9 +426,9 @@ Info (21057): Implemented 1 device resources after synthesis - the final resourc
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4754 megabytes
-    Info: Processing ended: Sun May 24 16:19:45 2020
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:01:18
+    Info: Peak virtual memory: 4742 megabytes
+    Info: Processing ended: Mon May 25 16:32:19 2020
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:31
 
 

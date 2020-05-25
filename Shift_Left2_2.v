@@ -1,7 +1,7 @@
 
 module Shift_Left2_2(
 	input [25:0]in,
-	output reg[27:0]out
+	output reg[31:0]out
 
 );
 
