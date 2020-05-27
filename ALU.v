@@ -7,7 +7,7 @@ module ALU(
 );
 
 
-always @*
+always @(Sel)
 begin
 		case(Sel)
 		

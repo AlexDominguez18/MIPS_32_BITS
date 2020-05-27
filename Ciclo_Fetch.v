@@ -34,7 +34,7 @@ always @(posedge clk)
 	
 initial
 	begin
-		$readmemb("C:\\Verilog\\Proyecto\\MIPS_32_BITS-master\\binario.txt", MEM);
+		$readmemb("C:\\Arquitectura\\Proyecto\\MIPS_32_BITS-master\\binario.txt", MEM);
 	end
  
 assign Sal = {MEM[DirSalida],MEM[DirSalida+1],MEM[DirSalida+2],MEM[DirSalida+3]}; // se concatena
