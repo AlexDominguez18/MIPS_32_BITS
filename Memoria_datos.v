@@ -8,6 +8,12 @@ module Memoria_datos(
 
 reg [31:0]Memoria[0:31];
 
+
+initial 
+	begin
+		$readmemb("C:\\Verilog\\Proyecto\\MIPS_32_BITS-master\\MemoriaDatos.txt", Memoria);
+	end
+
 always @* 
 	case(MemWrite)
 	

@@ -13,7 +13,7 @@ always @*
 	3'b 010: //Tipo R
 			case(Funct)
 			
-			//SUMA
+			//NOP
 			6'b 000000:
 				begin
 					Sel = 4'b 0000;
@@ -32,7 +32,7 @@ always @*
 				end
 				
 			//MULTIPLICACION
-			6'b 000010:
+			6'b 011001:
 				begin
 					Sel = 4'b 0011;
 				end

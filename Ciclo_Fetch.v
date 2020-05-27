@@ -8,12 +8,12 @@ module Ciclo_Fetch(
 );
 
  reg[31:0]DirSalida;
- reg[6:0]pc;
- reg [7:0]MEM[127:0];
+ reg[7:0]pc;
+ reg [7:0]MEM[149:0];
  
 initial
 	begin
-		pc = 7'd 0;
+		pc = 8'd 0;
 	end
 	
 always @(posedge clk)
@@ -27,14 +27,14 @@ always @(posedge clk)
 				DirSalida = 32'd 0;
 			end
 		pc = DirSalida;
-		pc = pc + 7'd 4;
+		pc = pc + 8'd 4;
 		out=pc;
 		Fetch=pc;
  end
 	
 initial
 	begin
-		$readmemb("C:\\Verilog\\Proyecto\\MIPS_32_BITS-master\\Instrucciones.mem", MEM);
+		$readmemb("C:\\Verilog\\Proyecto\\MIPS_32_BITS-master\\binario.txt", MEM);
 	end
  
 assign Sal = {MEM[DirSalida],MEM[DirSalida+1],MEM[DirSalida+2],MEM[DirSalida+3]}; // se concatena
