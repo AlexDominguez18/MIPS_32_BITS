@@ -55,6 +55,13 @@ def main():
                 instruccion.append(j)
             instruccion.append("00000100110")
 
+        elif ("nop" in linea):
+            instruccion.append("000000")
+            numero_b = replaceSymbols(linea)
+            for j in numero_b:
+                instruccion.append(j)
+            instruccion.append("00000000000")
+
         elif("addi" in linea):
             instruccion.append("001000")
             numero_b = replaceSymbols(linea)
@@ -79,8 +86,14 @@ def main():
             for j in numero_b:
                 instruccion.append(j)
 
-        elif("lw" in linea):
+        elif("lw" in linea and "c1" not in linea):
             instruccion.append("100011")
+            numero_b = replaceSymbols(linea)
+            for j in numero_b:
+                instruccion.append(j)
+
+        elif ("lwc1" in linea):
+            instruccion.append("110001")
             numero_b = replaceSymbols(linea)
             for j in numero_b:
                 instruccion.append(j)
@@ -92,12 +105,11 @@ def main():
                 instruccion.append(j)
         
         elif("slt" in linea and "i" not in linea):
-            print("AQUI PUTO")
-            input()
             instruccion.append("000000")
             numero_b = replaceSymbols(linea)
             for j in numero_b:
                 instruccion.append(j)
+            instruccion.append("00000101010")
 
         elif("slti" in linea):
             instruccion.append("001010")
@@ -192,8 +204,12 @@ def replaceSymbols(linea):
             linea_num = linea_num.replace("xori", "")
             tipo = "I"
 
-        elif("lw" in linea_num):
+        elif("lw" in linea_num and "c1" not in linea):
             linea_num = linea_num.replace("lw", "")
+            tipo = "I"
+
+        elif("lwc1" in linea):
+            linea_num = linea_num.replace("lwc1","")
             tipo = "I"
 
         elif("sw" in linea_num):
@@ -220,6 +236,10 @@ def replaceSymbols(linea):
             linea_num = linea_num.replace("j", "")
             tipo = "J"
 
+        elif ("nop" in linea_num):
+            linea_num = linea_num.replace("nop","")
+            tipo = "R"
+        
         else:
             pass
 
